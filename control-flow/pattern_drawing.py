@@ -1,25 +1,20 @@
-def draw_square_pattern():
-    """
-    Prompts the user for a positive integer and draws a square pattern of that size
-    using nested loops.
-    """
-    while True:
-        try:
-            size_str = input("Enter the size of the pattern: ")
-            size = int(size_str)
-            if size > 0:
-                break
-            else:
-                print("Please enter a positive integer.")
-        except ValueError:
-            print("Invalid input. Please enter an integer.")
+while True:
+    try:
+        size = int(input("Enter the size of the pattern: "))
+        if size > 0:
+            break
+        else:
+            print("Please enter a positive integer greater than zero.")
+    except ValueError:
+        print("Invalid input. Please enter a numeric value.")
 
-    i = 0
-    while i < size:
-        for _ in range(size):
-            print("*", end="")
-        print()
-        i += 1
+# Initialize row counter
+row = 0
 
-if __name__ == "__main__":
-    draw_square_pattern()
+# Use while loop to iterate through rows
+while row < size:
+    # Use for loop to print asterisks in each row
+    for col in range(size):
+        print("*", end="")
+    print()  # Move to the next line after each row
+    row += 1
