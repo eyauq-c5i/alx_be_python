@@ -5,9 +5,9 @@ def perform_operation(num1: float, num2: float, operation: str):
         return num1 - num2
     elif operation == "multiply":
         return num1 * num2
-    elif operation == "devide":
+    elif operation == "divide":
+        if num2 == 0:
+            return "Cannot be divided by 0."
         return num1 / num2
-    elif num2 == 0:
-        print("Cannot be divided by 0.")
     else:
-        print("Numbers Invalid")
+        return "Invalid Operation."
