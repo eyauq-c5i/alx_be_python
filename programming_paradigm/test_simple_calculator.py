@@ -49,7 +49,7 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertAlmostEqual(self.calc.multiply(2.5, 2.0), 5.0)
 
 
-    def test_divide(self):
+    def test_division(self):
         """Test the division method, including the division by zero edge case."""
         # Normal division
         self.assertEqual(self.calc.divide(10, 5), 2.0)
